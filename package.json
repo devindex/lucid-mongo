@@ -1,5 +1,5 @@
 {
-  "name": "adonis-lucid-mongodb",
+  "name": "@devindex/lucid-mongodb",
   "description": "AdonisJs Mongodb ORM",
   "main": "index.js",
   "directories": {

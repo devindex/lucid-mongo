@@ -15,7 +15,7 @@ Version 2.x was published to npm with new name. Make sure you install correct ve
 
 | Adonis version  | Version | Name |
 | ------------- | ------------- | ------------- |
-| 3.x.x  | 1.x.x  | [adonis-lucid-mongodb](https://www.npmjs.com/package/adonis-lucid-mongodb) |
+| 3.x.x  | 1.x.x  | [@devindex/lucid-mongodb](https://www.npmjs.com/package/@devindex/lucid-mongodb) |
 | 4.x.x  | 2.x.x  | [lucid-mongo](https://www.npmjs.com/package/lucid-mongo) |
 
 Adonis-lucid-mongodb is a mongo query builder and ODM for Adonis framework. It also has support for database migrations, seeds and factories as Adonis-lucid.
