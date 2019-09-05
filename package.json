@@ -11,7 +11,8 @@
     "fix": "standard --fix",
     "test:all": "DB=mongodb npm run test",
     "coverage": "npm run lint && node ./bin/coverage",
-    "test": "npm run lint && FORCE_COLOR=true node ./bin/test"
+    "test": "npm run lint && FORCE_COLOR=true node ./bin/test",
+    "release": "sh release.sh"
   },
   "standard": {
     "global": [
