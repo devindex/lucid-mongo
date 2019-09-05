@@ -2,7 +2,7 @@
 
 > **NB - WORK IN PROGRESS**
 
-[![Version](https://img.shields.io/npm/v/adonis-lucid-mongodb.svg?style=flat-square)](https://www.npmjs.com/package/adonis-lucid-mongodb)
+[![Version](https://img.shields.io/npm/v/@devindex/lucid-mongodb.svg?style=flat-square)](https://www.npmjs.com/package/@devindex/lucid-mongodb)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 [![Build Status](https://travis-ci.org/duyluonglc/lucid-mongo.svg?branch=1.x)](https://travis-ci.org/duyluonglc/lucid-mongo)
 [![Coverage Status](https://img.shields.io/coveralls/duyluonglc/lucid-mongo/1.x.svg?style=flat-square)](https://coveralls.io/github/duyluonglc/lucid-mongo?branch=1.x)
@@ -274,11 +274,11 @@ You can get the instance of mongodb drive to execute raw query
 To setup this package
 
 ```bash
-$ npm i --save adonis-lucid-mongodb
+$ npm i --save @devindex/lucid-mongodb
 ```
 
 and then register lucid providers inside the your `bootstrap/app.js` file.
-you should complete replace all setting of `adonis-lucid` with `adonis-lucid-mongodb`
+you should complete replace all setting of `adonis-lucid` with `@devindex/lucid-mongodb`
 
 ```javascript
 const providers = [
@@ -286,9 +286,9 @@ const providers = [
   // 'adonis-lucid/providers/DatabaseProvider',
   // 'adonis-lucid/providers/LucidMongoProvider',
   // 'adonis-lucid/providers/FactoryProvider'  
-  'adonis-lucid-mongodb/providers/DatabaseProvider',
-  'adonis-lucid-mongodb/providers/LucidMongoProvider',
-  'adonis-lucid-mongodb/providers/FactoryProvider',
+  '@devindex/lucid-mongodb/providers/DatabaseProvider',
+  '@devindex/lucid-mongodb/providers/LucidMongoProvider',
+  '@devindex/lucid-mongodb/providers/FactoryProvider',
 ]
 
 const aceProviders = [
@@ -297,10 +297,10 @@ const aceProviders = [
   // 'adonis-lucid/providers/MigrationsProvider',
   // 'adonis-lucid/providers/SchemaProvider',
   // 'adonis-lucid/providers/SeederProvider',  
-  'adonis-lucid-mongodb/providers/CommandsProvider',
-  'adonis-lucid-mongodb/providers/MigrationsProvider',
-  'adonis-lucid-mongodb/providers/SchemaProvider',
-  'adonis-lucid-mongodb/providers/SeederProvider',
+  '@devindex/lucid-mongodb/providers/CommandsProvider',
+  '@devindex/lucid-mongodb/providers/MigrationsProvider',
+  '@devindex/lucid-mongodb/providers/SchemaProvider',
+  '@devindex/lucid-mongodb/providers/SeederProvider',
 ]
 ```
 
