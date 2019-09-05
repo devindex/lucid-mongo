@@ -142,15 +142,21 @@ Database.connection = function (connection) {
       if (!config) {
         throw CE.InvalidArgumentException.missingConfig(`Unable to get database client configuration for ${connection}`)
       }
-      const security = (process.env.DB_USER && process.env.DB_PASSWORD)
-        ? `${process.env.DB_USER}:${process.env.DB_PASSWORD}@`
-        : (process.env.DB_USER ? `${process.env.DB_USER}@` : '')
 
-      const authString = (config.connection.auth && config.connection.auth.source && config.connection.auth.mechanism)
-        ? `?authSource=${config.connection.auth.source}&authMechanism=${config.connection.auth.mechanism}`
-        : ''
+      let connectionString = config.connectionString;
 
-      const connectionString = `mongodb://${security}${config.connection.host}:${config.connection.port}/${config.connection.database}${authString}`
+      if (!connectionString) {
+        const security = (process.env.DB_USER && process.env.DB_PASSWORD)
+          ? `${process.env.DB_USER}:${process.env.DB_PASSWORD}@`
+          : (process.env.DB_USER ? `${process.env.DB_USER}@` : '')
+
+        const authString = (config.connection.auth && config.connection.auth.source && config.connection.auth.mechanism)
+          ? `?authSource=${config.connection.auth.source}&authMechanism=${config.connection.auth.mechanism}`
+          : ''
+
+        connectionString = `mongodb://${security}${config.connection.host}:${config.connection.port}/${config.connection.database}${authString}`
+      }
+
       MongoClient.connect(connectionString).then(dbConnection => {
         connectionPools[connection] = dbConnection
         resolve(connectionPools[connection])
